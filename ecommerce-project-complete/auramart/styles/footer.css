@@ -1,0 +1,57 @@
+/* AURAMART — footer.css
+   Feature strip at the bottom */
+
+.feature-strip {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  /* No box: the footer is part of the page, pinned to the bottom */
+  padding: 8px 12px 17px; /* tight: 75% less above, 50% less below */
+  margin-top: auto; /* pushes it to the bottom of the flex page */
+  position: relative;
+}
+
+/* The Divider line */
+.feature-strip::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100vw;
+  height: 1px;
+  background: var(--border);
+}
+
+.feature {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  justify-content: center;
+  padding: 4px 18px;
+  cursor: default;
+}
+
+.feature img {
+  width: 34px;
+  height: 34px;
+  transition: transform 0.2s ease;
+}
+
+.feature h4 {
+  font-size: 16px;
+  margin-bottom: 3px;
+  transition: color 0.2s ease;
+}
+.feature p {
+  font-size: 13.5px;
+  color: var(--text-muted);
+  transition: color 0.2s ease;
+}
+
+.feature:hover h4,
+.feature:hover p {
+  color: var(--accent-red);
+}
+.feature:hover img {
+  transform: scale(1.2);
+}

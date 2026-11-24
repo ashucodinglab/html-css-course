@@ -1,0 +1,398 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Auramart - Elevate Your Everyday</title>
+    <!-- Each stylesheet handles one part of the page.-->
+    <link rel="stylesheet" href="styles/general.css" />
+    <link rel="stylesheet" href="styles/header.css" />
+    <link rel="stylesheet" href="styles/hero.css" />
+    <link rel="stylesheet" href="styles/products.css" />
+    <link rel="stylesheet" href="styles/footer.css" />
+    <link rel="stylesheet" href="styles/responsive.css" />
+  </head>
+  <body>
+    <div class="page-wrapper">
+      <!-- ------------------- HEADER ------------------- -->
+      <header class="site-header">
+        <a href="index.html" class="logo">AuraMart</a>
+
+        <nav class="main-nav">
+          <a href="index.html" class="active">Home</a>
+          <a href="index.html">Shop</a>
+
+          <div class="nav-item">
+            <a href="index.html">Categories</a>
+            <div class="dropdown">
+              <a href="index.html">Electronics</a>
+              <a href="index.html">Fashion</a>
+              <a href="index.html">Home &amp; Kitchen</a>
+            </div>
+          </div>
+
+          <div class="nav-item">
+            <a href="index.html">Deals</a>
+            <div class="dropdown">
+              <a href="index.html">Today's Deals</a>
+              <a href="index.html">Weekly Offers</a>
+              <a href="index.html">Clearance</a>
+            </div>
+          </div>
+
+          <div class="nav-item">
+            <a href="index.html#best-sellers">Best Sellers</a>
+            <div class="dropdown">
+              <a href="index.html#best-sellers">Top Electronics</a>
+              <a href="index.html#best-sellers">Top Fashion</a>
+              <a href="index.html#best-sellers">Trending Now</a>
+            </div>
+          </div>
+
+          <a href="index.html">Contact</a>
+        </nav>
+
+        <div class="header-actions">
+          <div class="search-bar">
+            <img src="icons/search.svg" alt="Search" />
+            <input type="text" placeholder="Search Products..." />
+          </div>
+          <button class="icon-btn" aria-label="Cart">
+            <img src="icons/cart.svg" alt="Cart" />
+            <span class="cart-count">3</span>
+          </button>
+          <button class="icon-btn" aria-label="Account">
+            <img src="icons/user.svg" alt="Account" />
+          </button>
+        </div>
+      </header>
+      <!-- --------- MAIN GRID: Content + Cart sidebar ---------- -->
+      <div class="main-grid">
+        <main>
+          <!-- ---------- HERO ---------- -->
+          <section class="hero">
+            <div class="hero-text">
+              <label class="hero-badge">
+                <img src="icons/sparkle.svg" alt="" />
+                <input
+                  type="text"
+                  id="hero-prompt"
+                  placeholder="Describe what you want..."
+                />
+              </label>
+              <h1 class="hero-title">
+                Elevate your<br />
+                <span class="gradient-text shimmer">Everyday</span>
+              </h1>
+              <p class="hero-subtitle">
+                Discover premium electronics, fashion, and essentials for your
+                everyday lifestyle.
+              </p>
+              <a href="index.html" class="gradient-btn">
+                Shop Now
+                <img src="icons/arrow-right.svg" alt="" />
+              </a>
+            </div>
+            <div class="hero-slider">
+              <div class="hero-track">
+                <img src="images/hero.png" alt="Premium products showcase" />
+                <img src="images/hero-2.png" alt="Ultra Notebook" />
+                <img src="images/hero-3.png" alt="Air Fryer Compact" />
+                <!-- Slide 4 = slide 1 is the secret of a seamless loop.-->
+                <img src="images/hero.png" alt="Premium products showcase" />
+              </div>
+            </div>
+          </section>
+          <!-- ---------- BEST SELLERS ---------- -->
+          <section id="best-sellers">
+            <div class="section-header">
+              <h2>Best Sellers</h2>
+              <div class="carousel-controls">
+                <button
+                  class="carousel-btn"
+                  id="carousel-prev"
+                  aria-label="Previous"
+                >
+                  &#8249;
+                </button>
+                <button
+                  class="carousel-btn"
+                  id="carousel-next"
+                  aria-label="Next"
+                >
+                  &#8250;
+                </button>
+                <a href="index.html#best-sellers" class="view-all">View All</a>
+              </div>
+            </div>
+            <div class="product-grid" id="product-carousel">
+              <article
+                class="product-card"
+                data-name="Wireless Headphones"
+                data-price="59.99"
+                data-img="images/product-headphones.png"
+              >
+                <img
+                  class="product-img"
+                  src="images/product-headphones.png"
+                  alt="Wireless Headphones"
+                />
+                <button class="wishlist-btn" aria-label="Add to wishlist">
+                  <img src="icons/heart-outline.svg" alt="" />
+                </button>
+                <div class="product-info">
+                  <h3>Wireless Headphones</h3>
+                  <p class="price">$59.99</p>
+                  <div class="rating">
+                    <img src="icons/star-full.svg" alt="" />
+                    <img src="icons/star-full.svg" alt="" />
+                    <img src="icons/star-full.svg" alt="" />
+                    <img src="icons/star-full.svg" alt="" />
+                    <img src="icons/star-full.svg" alt="" />
+                    <span class="count">(728)</span>
+                  </div>
+                  <button class="add-cart-btn">Add to Cart</button>
+                </div>
+              </article>
+              <article
+                class="product-card"
+                data-name="Smart Watch Pro"
+                data-price="89.99"
+                data-img="images/product-watch.png"
+              >
+                <img
+                  class="product-img"
+                  src="images/product-watch.png"
+                  alt="Smart Watch Pro"
+                />
+                <button class="wishlist-btn" aria-label="Add to wishlist">
+                  <img src="icons/heart-outline.svg" alt="" />
+                </button>
+                <div class="product-info">
+                  <h3>Smart Watch Pro</h3>
+                  <p class="price">$89.99</p>
+                  <div class="rating">
+                    <img src="icons/star-full.svg" alt="" />
+                    <img src="icons/star-full.svg" alt="" />
+                    <img src="icons/star-full.svg" alt="" />
+                    <img src="icons/star-full.svg" alt="" />
+                    <img src="icons/star-full.svg" alt="" />
+                    <span class="count">(964)</span>
+                  </div>
+                  <button class="add-cart-btn">Add to Cart</button>
+                </div>
+              </article>
+              <article
+                class="product-card"
+                data-name="Minimal Backpack"
+                data-price="59.99"
+                data-img="images/product-backpack.png"
+              >
+                <img
+                  class="product-img"
+                  src="images/product-backpack.png"
+                  alt="Minimal Backpack"
+                />
+                <button class="wishlist-btn" aria-label="Add to wishlist">
+                  <img src="icons/heart-outline.svg" alt="" />
+                </button>
+                <div class="product-info">
+                  <h3>Minimal Backpack</h3>
+                  <p class="price">$59.99</p>
+                  <div class="rating">
+                    <img src="icons/star-full.svg" alt="" />
+                    <img src="icons/star-full.svg" alt="" />
+                    <img src="icons/star-full.svg" alt="" />
+                    <img src="icons/star-full.svg" alt="" />
+                    <img src="icons/star-full.svg" alt="" />
+                    <span class="count">(780)</span>
+                  </div>
+                  <button class="add-cart-btn">Add to Cart</button>
+                </div>
+              </article>
+              <article
+                class="product-card"
+                data-name="Sneaker Classic"
+                data-price="69.99"
+                data-img="images/product-sneaker.png"
+              >
+                <img
+                  class="product-img"
+                  src="images/product-sneaker.png"
+                  alt="Sneaker Classic"
+                />
+                <button class="wishlist-btn" aria-label="Add to wishlist">
+                  <img src="icons/heart-outline.svg" alt="" />
+                </button>
+                <div class="product-info">
+                  <h3>Sneaker Classic</h3>
+                  <p class="price">$69.99</p>
+                  <div class="rating">
+                    <img src="icons/star-full.svg" alt="" />
+                    <img src="icons/star-full.svg" alt="" />
+                    <img src="icons/star-full.svg" alt="" />
+                    <img src="icons/star-full.svg" alt="" />
+                    <img src="icons/star-full.svg" alt="" />
+                    <span class="count">(112)</span>
+                  </div>
+                  <button class="add-cart-btn">Add to Cart</button>
+                </div>
+              </article>
+              <article
+                class="product-card"
+                data-name="Ultra Notebook"
+                data-price="129.99"
+                data-img="images/product-notebook.png"
+              >
+                <img
+                  class="product-img"
+                  src="images/product-notebook.png"
+                  alt="Ultra Notebook"
+                />
+                <button class="wishlist-btn" aria-label="Add to wishlist">
+                  <img src="icons/heart-outline.svg" alt="" />
+                </button>
+                <div class="product-info">
+                  <h3>Ultra Notebook</h3>
+                  <p class="price">$129.99</p>
+                  <div class="rating">
+                    <img src="icons/star-full.svg" alt="" />
+                    <img src="icons/star-full.svg" alt="" />
+                    <img src="icons/star-full.svg" alt="" />
+                    <img src="icons/star-full.svg" alt="" />
+                    <img src="icons/star-full.svg" alt="" />
+                    <span class="count">(452)</span>
+                  </div>
+                  <button class="add-cart-btn">Add to Cart</button>
+                </div>
+              </article>
+              <article
+                class="product-card"
+                data-name="Air Fryer Compact"
+                data-price="79.99"
+                data-img="images/product-airfryer.png"
+              >
+                <img
+                  class="product-img"
+                  src="images/product-airfryer.png"
+                  alt="Air Fryer Compact"
+                />
+                <button class="wishlist-btn" aria-label="Add to wishlist">
+                  <img src="icons/heart-outline.svg" alt="" />
+                </button>
+                <div class="product-info">
+                  <h3>Air Fryer Compact</h3>
+                  <p class="price">$79.99</p>
+                  <div class="rating">
+                    <img src="icons/star-full.svg" alt="" />
+                    <img src="icons/star-full.svg" alt="" />
+                    <img src="icons/star-full.svg" alt="" />
+                    <img src="icons/star-full.svg" alt="" />
+                    <img src="icons/star-full.svg" alt="" />
+                    <span class="count">(96)</span>
+                  </div>
+                  <button class="add-cart-btn">Add to Cart</button>
+                </div>
+              </article>
+            </div>
+          </section>
+        </main>
+        <!-- ---------- CART SIDEBAR ---------- -->
+        <aside class="cart-panel">
+          <div class="cart-panel-header">
+            <h2>Your Cart</h2>
+            <span class="cart-badge">3</span>
+          </div>
+          <div class="cart-item" data-price="59.99">
+            <img
+              class="cart-thumb"
+              src="images/cart-headphones.png"
+              alt="Wireless Headphones"
+            />
+            <div class="cart-item-info">
+              <h4>Wireless Headphones</h4>
+              <p class="price">$59.99</p>
+              <p class="qty">Qty: 1</p>
+            </div>
+            <button class="remove-item" aria-label="Remove item">
+              <img src="icons/close.svg" alt="" />
+            </button>
+          </div>
+          <div class="cart-item" data-price="89.99">
+            <img
+              class="cart-thumb"
+              src="images/cart-watch.png"
+              alt="Smart Watch Pro"
+            />
+            <div class="cart-item-info">
+              <h4>Smart Watch Pro</h4>
+              <p class="price">$89.99</p>
+              <p class="qty">Qty: 1</p>
+            </div>
+            <button class="remove-item" aria-label="Remove item">
+              <img src="icons/close.svg" alt="" />
+            </button>
+          </div>
+          <div class="cart-item" data-price="69.99">
+            <img
+              class="cart-thumb"
+              src="images/cart-sneaker.png"
+              alt="Sneaker Classic"
+            />
+            <div class="cart-item-info">
+              <h4>Sneaker Classic</h4>
+              <p class="price">$69.99</p>
+              <p class="qty">Qty: 1</p>
+            </div>
+            <button class="remove-item" aria-label="Remove item">
+              <img src="icons/close.svg" alt="" />
+            </button>
+          </div>
+          <div class="cart-subtotal">
+            <span>Subtotal</span>
+            <span class="amount">$219.97</span>
+          </div>
+          <a href="#" class="gradient-btn checkout-btn">
+            Checkout
+            <img src="icons/arrow-right.svg" alt="" />
+          </a>
+          <p class="secure-note">
+            <img src="icons/lock-small.svg" alt="" />
+            Secure Checkout
+          </p>
+        </aside>
+      </div>
+      <!-- ---------- FOOTER ---------- -->
+      <footer class="feature-strip">
+        <div class="feature">
+          <img src="icons/truck.svg" alt="" />
+          <div>
+            <h4>Free Shipping</h4>
+            <p>On all orders</p>
+          </div>
+        </div>
+        <div class="feature">
+          <img src="icons/returns.svg" alt="" />
+          <div>
+            <h4>30-Day Returns</h4>
+            <p>No questions asked</p>
+          </div>
+        </div>
+        <div class="feature">
+          <img src="icons/lock.svg" alt="" />
+          <div>
+            <h4>Secure Payments</h4>
+            <p>100% protected</p>
+          </div>
+        </div>
+        <div class="feature">
+          <img src="icons/support.svg" alt="" />
+          <div>
+            <h4>24/7 Support</h4>
+            <p>We're here to help</p>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

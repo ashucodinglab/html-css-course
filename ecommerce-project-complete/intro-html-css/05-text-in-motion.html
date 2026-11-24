@@ -1,0 +1,97 @@
+<style>
+  :root {
+    --pink: #ac4899;
+    --purple: #a855f7;
+    --star-gold: #fbbf24;
+  }
+
+  body {
+    font-family: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+    background-color: #08080d;
+    color: White;
+    padding: 40px;
+  }
+
+  /* colored + italic + tilted + pulsing */
+  .sale-badge {
+    display: inline-block;
+    color: var(--star-gold);
+    font-style: italic;
+    font-size: 44px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    transform: rotate(-8deg);
+    animation: pulse 1.2s ease-in-out infinite;
+  }
+
+  @keyframes pulse {
+    0%,
+    100% {
+      transform: rotate(-8deg) scale(1);
+    }
+    50% {
+      transform: rotate(-8deg) scale(1.1);
+    }
+  }
+
+  .floating {
+    display: inline-block;
+    margin-top: 48px;
+    color: var(--purple);
+    font-size: 26px;
+    font-weight: 600;
+    animation: float 2.5s ease-in-out infinite;
+  }
+
+  @keyframes float {
+    0%,
+    100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+  }
+
+  .announcement-bar {
+    margin-top: 48px;
+    background: linear-gradient(90deg, var(--pink), var(--purple));
+    border-radius: 10px;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+
+  .announcement-text {
+    display: inline-block;
+    padding: 12px 0;
+    font-weight: 600;
+    animation: marquee 12s linear infinite;
+  }
+
+  @keyframes marquee {
+    from {
+      transform: translateX(100%);
+    }
+    to {
+      transform: translateX(-100%);
+    }
+  }
+
+  .announcement-bar:hover .announcement-text {
+    animation-play-state: paused;
+  }
+</style>
+
+<!-- Exercise 5.1: Text in motion. -->
+<span class="sale-badge">MEGA SALE -50%</span>
+
+<!-- Exercise 5.2: Floating text. -->
+<span class="floating">🚚 Free shipping on all orders.</span>
+
+<!-- Exercise 5.3: The scrolling anouncement bar. -->
+<div class="announcement-bar">
+  <span class="announcement-text">
+    Flash deals every Friday! New Arrivals in Electronics! Members get early
+    access!
+  </span>
+</div>

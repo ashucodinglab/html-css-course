@@ -1,0 +1,121 @@
+/* AURAMART — general.css
+   Base styles, variables, gradient utilities */
+
+:root {
+  /* color palette */
+  --bg-page: #08080d;
+  --bg-panel: #101018;
+  --bg-input: #1b1b26;
+  --bg-card: #15151f;
+  --border: #26262f;
+  --purple: #a855f7;
+  --pink: #ec4899;
+  --blue: #60a5fa;
+  --gradient-brand: linear-gradient(
+    90deg,
+    var(--pink) 0%,
+    var(--purple) 50%,
+    var(--blue) 100%
+  );
+  --gradient-button: linear-gradient(90deg, #d6246e 0%, #a855f7 100%);
+
+  /* Text */
+  --text-main: #ffffff;
+  --text-muted: #9ca3af;
+
+  /* Accents */
+  --accent-red: #f43f5e;
+  --star-gold: #fbbf24;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+  background-color: var(--bg-page);
+  color: var(--text-main);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow-x: clip; /* the page itself can never scroll sideways */
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+button {
+  font-family: inherit;
+  cursor: pointer;
+  border: none;
+}
+img {
+  display: block;
+}
+
+.page-wrapper {
+  max-width: 2240px;
+  margin: 0 auto;
+  padding: 0 14px; /* slim side margins: reduced egde gap by ~75% */
+  width: 100%;
+  flex: 1;
+  display: flex;
+  flex-direction: column; /* lets the footer pin to the bottom */
+}
+
+.gradient-text {
+  background: var(
+    --gradient-brand
+  ); /* Paint a gradient as the background of the text element */
+  -webkit-background-clip: text; /* Clip that background to the shape of the letters */
+  background-clip: text;
+  -webkit-text-fill-color: transparent; /* Make the letter color transparent so the gradient shows through */
+  color: transparent;
+}
+
+.shimmer {
+  background: var(--gradient-brand);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: gradient-wave 4s linear infinite;
+}
+
+@keyframes gradient-wave {
+  to {
+    background-position: -200% center;
+  }
+}
+
+/* Gradient button (Shop Now, Checkout) */
+.gradient-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: var(--gradient-button);
+  color: var(--text-main);
+  font-size: 16px;
+  font-weight: 600;
+  padding: 14px 28px;
+  border-radius: 10px;
+  transition:
+    transform 0.15s ease,
+    box-shadow 0.15s ease,
+    filter 0.15s ease;
+}
+
+.gradient-btn img {
+  width: 18px;
+  height: 18px;
+}
+
+.gradient-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(168, 85, 247, 0.35);
+  filter: brightness(1.08);
+}

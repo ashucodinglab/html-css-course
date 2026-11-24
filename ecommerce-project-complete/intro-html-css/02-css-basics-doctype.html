@@ -1,0 +1,91 @@
+<!-- Exercise 2.4: Wrap exercises 2.1 - 2.3 in '<!DOCTYPE html>'. -->
+<!doctype html>
+<html>
+  <head>
+    <title>Style Lab</title>
+    <style>
+      :root {
+        --white: white;
+        --purple: purple;
+      }
+      body {
+        background-color: #000000;
+        color: var(--white);
+      }
+
+      .add-cart-btn {
+        background: rgb(128, 0, 128);
+        color: var(--white);
+        border: none;
+        padding: 14px 28px;
+        border-radius: 10px;
+        cursor: pointer;
+        margin-right: 12px; /* space on right side of the box model. */
+      }
+
+      .gradient-btn {
+        background: linear-gradient(90deg, magenta 0%, violet 100%);
+        color: var(--white);
+        border: none;
+        font-size: 16px;
+        font-weight: 600;
+        padding: 14px 28px;
+        border-radius: 10px;
+        cursor: pointer;
+        transition:
+          transform 0.15s ease,
+          box-shadow 0.15s ease,
+          filter 0.15s ease;
+      }
+
+      .gradient-btn:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 24px rgba(168, 85, 247, 0.35);
+        filter: brightness(1.08);
+      }
+
+      .search-bar {
+        margin-top: 24px;
+        background: #1b1b26;
+        border: 1px solid #26262f;
+        border-radius: 10px;
+        padding: 12px 16px;
+        width: 260px;
+        transition:
+          border-color 0.15s ease,
+          box-shadow 0.15s ease;
+      }
+
+      .search-bar:hover {
+        border-color: var(--purple);
+      }
+
+      .search-bar:focus-within {
+        border-color: var(--purple);
+        box-shadow: 0 0 0 3px rgba(168, 85, 247, 0.25);
+      }
+
+      .search-bar input {
+        background: transparent;
+        border: none;
+        outline: none;
+        color: var(--white);
+        font-size: 14px;
+        width: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Exercise 2.1 - Create a purple 'Add to Cart' button. -->
+    <button class="add-cart-btn">Add to Cart</button>
+    <p>This sentence will not show if color is not modified.</p>
+
+    <!-- Exercise 2.2 - Create a 'Shop Now' button with glow when hovered. -->
+    <button class="gradient-btn">Shop Now</button>
+
+    <!-- Exercise 2.3 - The search bar that glows on hover. -->
+    <div class="search-bar">
+      <input type="text" placeholder="Search products..." />
+    </div>
+  </body>
+</html>

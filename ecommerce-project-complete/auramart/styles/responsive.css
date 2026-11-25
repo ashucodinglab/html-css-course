@@ -2,6 +2,16 @@
    Tablet + mobile breakpoints */
 
 @media (max-width: 1200px) {
+  /* logo + actions on the first row, menu on its own row */
+  .site-header {
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 16px;
+  }
+  .main-nav {
+    order: 3;
+    flex: 0 0 100%;
+  }
   .main-grid {
     grid-template-columns: 1fr;
   }
@@ -35,8 +45,11 @@
   }
   .main-nav {
     order: 3;
-    width: 100%;
+    flex: 0 0 100%; /* full row: flex: 1 would ignore width: 100% */
     overflow-x: auto;
+  }
+  .main-nav a {
+    white-space: nowrap;
   }
   .search-bar {
     width: 170px;
